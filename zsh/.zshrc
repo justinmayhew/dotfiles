@@ -16,6 +16,7 @@ setopt HIST_IGNORE_SPACE
 
 PROMPT='[%n@%m %~]%# '
 
+export EDITOR="vim"
 export MANWIDTH=80
 
 alias vi="vim"
