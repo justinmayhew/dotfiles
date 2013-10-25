@@ -34,18 +34,18 @@ nnoremap <C-p> :bprevious<CR>
 nnoremap <Leader>n :call RenameFile()<CR>
 
 " File type specific options.
-au FileType c setlocal ts=4 sw=4 noet
-au FileType coffee setlocal ts=2 sw=2 et
-au FileType eruby setlocal ts=2 sw=2 et
-au FileType gitconfig setlocal ts=2 sw=2 noet
-au FileType go setlocal ts=4 sw=4 noet
-au FileType haskell setlocal ts=4 sw=4 et
-au FileType html setlocal ts=2 sw=2 et
-au FileType javascript setlocal ts=2 sw=2 et
-au FileType python setlocal ts=4 sw=4 et
-au FileType ruby setlocal ts=2 sw=2 et
-au FileType scss setlocal ts=2 sw=2 et
-au FileType vim setlocal ts=2 sw=2 et
+au FileType c setl ts=4 sw=4 noet
+au FileType coffee setl ts=2 sw=2 et
+au FileType eruby setl ts=2 sw=2 et
+au FileType gitconfig setl ts=2 sw=2 noet
+au FileType go setl ts=4 sw=4 noet
+au FileType haskell setl ts=4 sw=4 et
+au FileType html setl ts=2 sw=2 et
+au FileType javascript setl ts=2 sw=2 et
+au FileType python setl ts=4 sw=4 et
+au FileType ruby setl ts=2 sw=2 et
+au FileType scss setl ts=2 sw=2 et
+au FileType vim setl ts=2 sw=2 et
 
 " Status line and helper functions below from Gary Bernhardt's .vimrc
 " https://github.com/garybernhardt/dotfiles/blob/master/.vimrc
