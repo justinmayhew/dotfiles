@@ -1,0 +1,12 @@
+[user]
+	name = Justin Mayhew
+	email = mayhew@live.ca
+[core]
+	excludesfile = ~/.gitignore_global
+[color]
+	ui = auto
+[alias]
+	amend = commit --amend
+	d = diff
+	dc = diff --cached
+	st = status
