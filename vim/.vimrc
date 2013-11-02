@@ -17,6 +17,7 @@ set wildignorecase " Ignore case when completing file names and directories.
 set expandtab
 set tabstop=2
 set shiftwidth=2
+set softtabstop=-1
 
 " Enable persistent undo.
 set undodir=~/.vim/undo
