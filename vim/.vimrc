@@ -14,6 +14,7 @@ set title          " Add a title showing we're in Vim in terminal.
 set wildignorecase " Ignore case when completing file names and directories.
 
 " Indentation options.
+set backspace=indent,eol,start
 set expandtab
 set tabstop=2
 set shiftwidth=2
