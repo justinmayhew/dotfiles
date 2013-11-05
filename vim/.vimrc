@@ -33,6 +33,7 @@ inoremap <Tab> <C-r>=InsertTabWrapper()<CR>
 nnoremap <C-e> :buffer#<CR>
 nnoremap <C-n> :bnext<CR>
 nnoremap <C-p> :bprevious<CR>
+nnoremap <Leader>cd :cd %:p:h<CR>:pwd<CR>
 nnoremap <Leader>n :call RenameFile()<CR>
 
 " File type specific options.
