@@ -14,6 +14,8 @@ HISTSIZE=5000
 setopt SHARE_HISTORY
 setopt HIST_IGNORE_SPACE
 
+set -o emacs
+
 PROMPT='[%n@%m %~]%# '
 
 export EDITOR="vim"
