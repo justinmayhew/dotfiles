@@ -24,6 +24,8 @@ set softtabstop=-1
 set undodir=~/.vim/undo
 set undofile
 
+set directory=~/.vim/swap
+
 " Mappings.
 noremap ; :
 noremap <C-c> <Esc>
