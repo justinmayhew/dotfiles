@@ -38,6 +38,8 @@ nnoremap <C-p> :bprevious<CR>
 nnoremap <Leader>cd :cd %:p:h<CR>:pwd<CR>
 nnoremap <Leader>n :call RenameFile()<CR>
 
+let g:ctrlp_map = '<C-t>'
+
 " File type specific options.
 au FileType c setl ts=4 sw=4 noet
 au FileType coffee setl ts=2 sw=2 et
