@@ -10,6 +10,7 @@ set incsearch      " Jump to search results incrementally.
 set mouse=a        " Enable basic mouse support.
 set nohlsearch     " Don't highlight search results.
 set number         " Show line numbers on the left.
+set t_ut=          " Fixes background color issues when running inside tmux.
 set title          " Add a title showing we're in Vim in terminal.
 set wildignorecase " Ignore case when completing file names and directories.
 
