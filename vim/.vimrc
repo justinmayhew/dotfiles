@@ -40,6 +40,7 @@ nnoremap <Leader>cd :cd %:p:h<CR>:pwd<CR>
 nnoremap <Leader>n :call RenameFile()<CR>
 
 let g:ctrlp_map = '<C-t>'
+let g:go_fmt_command = "goimports"
 
 " File type specific options.
 au FileType c setl ts=4 sw=4 noet
