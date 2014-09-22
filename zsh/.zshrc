@@ -22,9 +22,3 @@ export EDITOR="vim"
 export MANWIDTH=80
 
 alias vi="vim"
-
-case $TERM in
-xterm*)
-  precmd() { print -Pn "\e]0;%n@%m: %~\a" }
-  ;;
-esac
