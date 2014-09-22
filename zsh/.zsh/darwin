@@ -1,8 +1,0 @@
-# Default PATH with /usr/local/bin first for Homebrew.
-PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
-
-export CLICOLOR=1
-
-alias ls="ls -F"
-
-# vim: ft=zsh

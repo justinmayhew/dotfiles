@@ -1,24 +1,26 @@
-autoload -U compinit
-compinit
-zstyle ':completion:*' menu select
-zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
+case `uname -s` in
+  Darwin) source ~/.zsh/darwin.zsh ;;
+  Linux)  source ~/.zsh/linux.zsh  ;;
+esac
 
-function {
-  local OS=$(uname -s | tr '[:upper:]' '[:lower:]')
-  source "$HOME/.zsh/$OS"
-}
+source ~/.zsh/completion.zsh
+source ~/.zsh/history.zsh
+source ~/.zsh/prompt.zsh
 
-HISTFILE="$HOME/.history"
-SAVEHIST=100000
-HISTSIZE=5000
-setopt SHARE_HISTORY
-setopt HIST_IGNORE_SPACE
+bindkey -e
 
-set -o emacs
+alias vi=vim
 
-PROMPT='[%n@%m %~]%# '
-
-export EDITOR="vim"
+export EDITOR=vim
 export MANWIDTH=80
 
-alias vi="vim"
+if [[ -d ~/.rbenv ]]; then
+  PATH=~/.rbenv/bin:$PATH
+  eval "$(rbenv init -)"
+fi
+
+if [[ -d ~/.go ]]; then
+  PATH=~/.go/bin:$PATH
+  export GOROOT=~/.go
+  export GOPATH=~
+fi
