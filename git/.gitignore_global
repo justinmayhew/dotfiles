@@ -1,3 +1,18 @@
+# Vim
 *.swp
 
+# OS X
 .DS_Store
+
+# Node
+node_modules/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Compiled object files, static and dynamic libraries
+*.o
+*.a
+*.so
