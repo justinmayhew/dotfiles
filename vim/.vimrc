@@ -27,6 +27,14 @@ set undofile
 
 set directory=~/.vim/swap
 
+set wig+=*.py[cod]
+set wig+=*.o
+set wig+=*.a
+set wig+=*.so
+set wig+=*/deps/*
+set wig+=*/node_modules/*
+set wig+=*/target/*
+
 " Mappings.
 noremap ; :
 noremap <C-c> <Esc>
@@ -55,6 +63,8 @@ au FileType python setl ts=4 sw=4 et
 au FileType ruby setl ts=2 sw=2 et
 au FileType scss setl ts=2 sw=2 et
 au FileType vim setl ts=2 sw=2 et
+
+au FileType go nmap <Leader>d <Plug>(go-def)
 
 " Status line and helper functions below from Gary Bernhardt's .vimrc
 " https://github.com/garybernhardt/dotfiles/blob/master/.vimrc
