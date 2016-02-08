@@ -12,4 +12,5 @@
 	d = diff
 	dc = diff --cached
 	l = log --graph --decorate --abbrev-commit --pretty=oneline
+	pom = push origin master
 	st = status
