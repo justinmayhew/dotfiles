@@ -65,6 +65,7 @@ au FileType ruby setl ts=2 sw=2 et
 au FileType scss setl ts=2 sw=2 et
 au FileType vim setl ts=2 sw=2 et
 
+au FileType gitcommit setl spell
 au FileType go nmap <Leader>d <Plug>(go-def)
 
 " Status line and helper functions below from Gary Bernhardt's .vimrc
