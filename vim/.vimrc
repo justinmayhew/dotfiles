@@ -25,6 +25,9 @@ set softtabstop=-1
 set undodir=~/.vim/undo
 set undofile
 
+" Delete comment characters when joining commented lines.
+set formatoptions+=j
+
 set directory=~/.vim/swap
 
 set wig+=*.py[cod]
