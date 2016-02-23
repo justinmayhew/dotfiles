@@ -3,7 +3,7 @@ autoload -Uz vcs_info
 
 setopt PROMPT_SUBST
 
-zstyle ':vcs_info:*' enable git hg
+zstyle ':vcs_info:*' enable git
 zstyle ':vcs_info:*' formats       '%F{red}%b '
 zstyle ':vcs_info:*' actionformats '%F{red}%b %F{yellow}%a '
 
