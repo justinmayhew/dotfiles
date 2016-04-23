@@ -1,8 +1,11 @@
 # Vim
 *.swp
 
-# OS X
+# OS X Finder
 .DS_Store
+
+# KDE Dolphin
+.directory
 
 # Node
 node_modules/
