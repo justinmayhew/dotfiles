@@ -25,6 +25,9 @@ set softtabstop=-1
 set undodir=~/.vim/undo
 set undofile
 
+" When opening new buffers, restore cursor position from previous edits and center it.
+au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"zz" | endif
+
 " Delete comment characters when joining commented lines.
 set formatoptions+=j
 
