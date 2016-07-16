@@ -2,7 +2,7 @@
 	name = Justin Mayhew
 	email = mayhew@live.ca
 [core]
-	excludesfile = ~/.gitignore_global
+	excludesfile = ~/.config/git/ignore
 [color]
 	ui = auto
 [alias]
