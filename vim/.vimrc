@@ -77,7 +77,7 @@ au FileType go nmap <Leader>d <Plug>(go-def)
 " Status line and helper functions below from Gary Bernhardt's .vimrc
 " https://github.com/garybernhardt/dotfiles/blob/master/.vimrc
 set laststatus=2
-set statusline=%<%f\ (%{&ft})\ %{fugitive#statusline()}\ %-4(%m%)%=%-19(%3l,%02c%03V%)
+set statusline=%<%f\ (%{&ft})\ %-4(%m%)%=%-19(%3l,%02c%03V%)
 
 " Prompt to rename the current file.
 function! RenameFile()
