@@ -1,12 +1,24 @@
-case `uname -s` in
-  Darwin) source ~/.zsh/darwin.zsh ;;
-  Linux)  source ~/.zsh/linux.zsh  ;;
-esac
+#
+# Completion
+#
+autoload -U compinit && compinit
 
-source ~/.zsh/completion.zsh
-source ~/.zsh/history.zsh
-source ~/.zsh/prompt.zsh
+zstyle ':completion:*' menu select
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 
+#
+# History
+#
+setopt SHARE_HISTORY
+setopt HIST_IGNORE_SPACE
+
+HISTFILE=~/.zsh_history
+HISTSIZE=5000
+SAVEHIST=100000
+
+#
+# Aliases, environment variables, etc.
+#
 bindkey -e
 
 alias vi=vim
@@ -14,13 +26,18 @@ alias vi=vim
 export EDITOR=vim
 export MANWIDTH=80
 
-if [[ -d ~/.rbenv ]]; then
-  PATH=~/.rbenv/bin:$PATH
-  eval "$(rbenv init -)"
-fi
+PROMPT='%F{green}%n@%m%f:%F{blue}%~%f%# '
 
-if [[ -d ~/.go ]]; then
-  PATH=~/.go/bin:$PATH
-  export GOROOT=~/.go
-  export GOPATH=~
-fi
+#
+# OS-specific configuration
+#
+case `uname -s` in
+  Darwin)
+    alias ls='ls -F'
+    export CLICOLOR=1
+    ;;
+  Linux)
+    alias ls='ls --color=auto --classify'
+    alias open=xdg-open
+    ;;
+esac
