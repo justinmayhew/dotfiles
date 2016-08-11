@@ -41,3 +41,8 @@ case `uname -s` in
     alias open=xdg-open
     ;;
 esac
+
+#
+# Source machine-specific configuration from another file
+#
+[[ -f ~/.config/env.zsh ]] && source ~/.config/env.zsh
