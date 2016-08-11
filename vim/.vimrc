@@ -27,6 +27,7 @@ set undofile
 
 " When opening new buffers, restore cursor position from previous edits and center it.
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"zz" | endif
+au BufWritePost ~/.Xresources !xrdb -merge ~/.Xresources
 
 " Delete comment characters when joining commented lines.
 set formatoptions+=j
@@ -44,6 +45,7 @@ set wig+=*/target/*
 " Mappings.
 noremap ; :
 noremap <C-c> <Esc>
+inoremap <C-c> <Esc>
 
 inoremap <Tab> <C-r>=InsertTabWrapper()<CR>
 
