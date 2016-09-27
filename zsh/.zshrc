@@ -26,7 +26,22 @@ alias vi=vim
 export EDITOR=vim
 export MANWIDTH=80
 
-PROMPT='%F{green}%n@%m%f:%F{blue}%~%f%# '
+#
+# Prompt
+#
+autoload -Uz vcs_info
+
+setopt PROMPT_SUBST
+
+zstyle ':vcs_info:*' enable git
+zstyle ':vcs_info:*' formats       '[%F{red}%b%f] '
+zstyle ':vcs_info:*' actionformats '[%F{red}%b%f] [%F{yellow}%a%f] '
+
+precmd() {
+  vcs_info
+}
+
+PROMPT='%F{blue}%~%f ${vcs_info_msg_0_}%# '
 
 #
 # OS-specific configuration
