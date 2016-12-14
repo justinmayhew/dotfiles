@@ -39,6 +39,7 @@ zstyle ':vcs_info:*' actionformats '[%F{red}%b%f] [%F{yellow}%a%f] '
 
 precmd() {
   vcs_info
+  print -Pn "\e]0;%n@%m: %~\a"
 }
 
 PROMPT='%F{blue}%~%f ${vcs_info_msg_0_}%# '
