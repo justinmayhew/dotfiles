@@ -14,6 +14,10 @@ set t_ut=          " Fixes background color issues when running inside tmux.
 set title          " Add a title showing we're in Vim in terminal.
 set wildignorecase " Ignore case when completing file names and directories.
 
+" webpack-dev-server misses most Vim write events
+" https://github.com/webpack/webpack/issues/781
+set backupcopy=yes
+
 " Indentation options.
 set backspace=indent,eol,start
 set expandtab
@@ -56,8 +60,18 @@ nnoremap <C-x> :bdelete<CR>
 nnoremap <Leader>cd :cd %:p:h<CR>:pwd<CR>
 nnoremap <Leader>n :call RenameFile()<CR>
 
-let g:ctrlp_map = '<Leader>t'
 let g:go_fmt_command = "goimports"
+
+" Prefer fzf over ctrlp if it's installed
+if executable('fzf')
+  let fzf_path = system('dirname $(dirname $(which fzf))')
+  execute 'set runtimepath+=' . fzf_path
+  nnoremap <Leader>t :FZF<CR>
+  " Prevent ctrlp from binding to buffer previous
+  let g:ctrlp_map = '<Leader>+'
+else
+  let g:ctrlp_map = '<Leader>t'
+endif
 
 " File type specific options.
 au FileType c setl ts=4 sw=4 noet
