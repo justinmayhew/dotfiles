@@ -61,6 +61,7 @@ nnoremap <Leader>cd :cd %:p:h<CR>:pwd<CR>
 nnoremap <Leader>n :call RenameFile()<CR>
 
 let g:go_fmt_command = "goimports"
+let g:rustfmt_autosave = 1
 
 " Prefer fzf over ctrlp if it's installed
 if executable('fzf')
