@@ -14,6 +14,14 @@ node_modules/
 __pycache__/
 *.py[cod]
 *$py.class
+*.egg-info/
+.mypy_cache/
+.cache/
+.coverage
+htmlcov/
+.tox/
+venv/
+docs/_build
 
 # Compiled object files, static and dynamic libraries
 *.o
@@ -22,3 +30,6 @@ __pycache__/
 
 # Ctags
 tags
+
+# Rust
+target/
