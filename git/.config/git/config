@@ -15,3 +15,9 @@
 	patch = format-patch master --stdout
 	pom = push origin master
 	st = status
+[status]
+	submoduleSummary = true
+[push]
+	recurseSubmodules = check
+[diff]
+	submodule = diff
