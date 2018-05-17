@@ -14,6 +14,13 @@ set t_ut=          " Fixes background color issues when running inside tmux.
 set title          " Add a title showing we're in Vim in terminal.
 set wildignorecase " Ignore case when completing file names and directories.
 
+" Enable menu command completion.
+set wildmenu
+
+" When a file has been detected to have been changed outside of Vim and
+" it has not been changed inside of Vim, automatically read it again.
+set autoread
+
 " webpack-dev-server misses most Vim write events
 " https://github.com/webpack/webpack/issues/781
 set backupcopy=yes
